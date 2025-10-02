@@ -14,7 +14,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 2 }}
       >
-        <h1 className="text-6xl text-center md:leading-4 md:text-8xl cursor-pointer text-lightFontText z-10 font-extrabold mb-4">
+        <h1 className="text-6xl text-center md:leading-8 md:text-8xl cursor-pointer text-lightFontText z-10 font-extrabold mb-4">
           GET FIT. <br /> <span> <h1 className="text-darkFontHeading">BEYEOND STANDARD.</h1></span>
         </h1 >
         
