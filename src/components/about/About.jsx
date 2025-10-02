@@ -41,7 +41,7 @@ const About = () => {
           src={about_image}
           alt="about-me-image"
           data-aos="zoom-in-up"
-          className="w-3/4 rounded-md mx-auto"
+          className="w-full md:w-3/4 rounded-md mx-auto"
         />
         <div
           className="about-text flex flex-col gap-4 leading-8 text-text-lightFontText   dark:text-darkFontText"

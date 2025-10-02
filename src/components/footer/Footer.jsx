@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="p-1 mx-.5 flex justify-between text-lightFontText dark:text-darkFontText md:px-28">
       <div className="rights">
-        <p>&copy; {`${new Date().getFullYear()} Hunter's world watamu.` }  Designed by <a className="font-bold" href="https://samuel-ziro.vercel.app">samtech</a></p>
+        <p className="text-sm md:text-base">&copy; {`${new Date().getFullYear()} ` }  Designed by <a className="font-bold" href="https://samuel-ziro.vercel.app">samtech</a></p>
       </div>
       <div className="back-top flex flex-col items-center">
         <Link to="Hero" smooth={true} offset={0} duration={500}>

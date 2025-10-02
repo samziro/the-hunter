@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,23 +22,22 @@ const Navbar = () => {
 
   useEffect(() => {
     Aos.init({ duration: 500 });
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const renderNavItems = () =>
-    navItems.map(({ to, label, offset }) => (
-      <li
+    navItems.map(({ to, label, offset }, i) => (
+      <motion.li
         key={to}
+        whileHover={{ scale: 1.05, color: "#4F46E5" }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: i * 0.1 }}
         className="hover:underline decoration-inherit decoration-2 underline-offset-4"
       >
         <Link
@@ -46,54 +45,88 @@ const Navbar = () => {
           smooth={true}
           offset={offset}
           duration={500}
-          onClick={toggleMenu}
+          onClick={() => setIsOpen(false)}
+          className="block px-2 py-1"
         >
           {label}
         </Link>
-      </li>
+      </motion.li>
     ));
 
   return (
-    <motion.div
-      className={`z-30 fixed w-full md:px-28 flex justify-between items-center py-1 transition-colors duration-300 ${
-        scrolled ? "bg-lightTheme text-lightFontHeading dark:bg-darkTheme shadow" : "bg-transparent"
+    <motion.nav
+      className={`z-30 fixed w-full flex justify-between items-center px-4 md:px-20 py-2 transition-colors duration-300 ${
+        scrolled
+          ? "bg-lightTheme text-lightFontHeading dark:bg-darkTheme shadow"
+          : "bg-transparent text-lightFontText"
       }`}
-      initial={{ y: -250 }}
+      initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ delay: 0.2, duration: 0.5, type: "spring", stiffness: 120 }}
+      transition={{ delay: 0.1, duration: 0.5, type: "spring", stiffness: 120 }}
     >
-      <div className="logo">
+      {/* Logo */}
+      <div className="logo flex items-center">
         <Link to="Hero" smooth={true} offset={0} duration={500}>
-          <img className="w-24" src={logo} alt="personal-trainer" />
+          <img
+            className="w-20 md:w-24 cursor-pointer"
+            src={logo}
+            alt="personal-trainer"
+          />
         </Link>
       </div>
 
-      <div className="links relative">
-        <ul
-          className={`md:flex md:justify-between md:items-center md:gap-8 cursor-pointer md:pt-2 ${
-            isOpen ? "block" : "hidden"
-          } md:flex-row flex flex-col items-center gap-4 absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 
-          ${scrolled ? "text-lightFontHeading dark:text-lightFontText" : "text-lightFontText"}`}
-        >
-          {renderNavItems()}
-        </ul>
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex md:gap-8 font-medium">{renderNavItems()}</ul>
 
-        <button
-          className="md:hidden block focus:outline-none absolute right-2 -mt-3"
-          onClick={toggleMenu}
-        >
-          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
-        </button>
-      </div>
+      {/* Mobile Menu Toggle */}
+      <button
+        className="md:hidden block focus:outline-none z-40"
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+      >
+        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
+      </button>
 
-      <div className="join-btn font-medium">
+      {/* Mobile Dropdown */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="absolute top-full left-0 w-full bg-white dark:bg-darkTheme shadow-md md:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ul className="flex flex-col items-center gap-4 py-6 font-medium">
+              {renderNavItems()}
+              <motion.li
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link to="Contact" smooth={true} offset={-270} duration={500}>
+                  <button className="mt-2 py-2 px-6 rounded-lg text-white bg-btnDarkTheme shadow">
+                    Contact Us
+                  </button>
+                </Link>
+              </motion.li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Desktop Button */}
+      <div className="hidden md:block">
         <Link to="Contact" smooth={true} offset={-270} duration={500}>
-          <button className="hidden md:block mt-1 py-1 px-4 rounded-lg text-lightFontHeading bg-btnDarkTheme ">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="py-2 px-6 rounded-lg text-lightFontHeading bg-btnDarkTheme font-medium shadow"
+          >
             Contact Us
-          </button>
+          </motion.button>
         </Link>
       </div>
-    </motion.div>
+    </motion.nav>
   );
 };
 
