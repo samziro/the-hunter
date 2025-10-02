@@ -84,7 +84,7 @@ const Navbar = () => {
         onClick={toggleMenu}
         aria-label="Toggle navigation menu"
       >
-        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
+        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2xl" />
       </button>
 
       {/* Mobile Dropdown */}
