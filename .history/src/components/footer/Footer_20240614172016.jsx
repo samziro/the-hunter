@@ -1,0 +1,18 @@
+import arrow from '../../assets/arrow-up-circle-svgrepo-com.svg'
+
+
+const Footer = () => {
+  return (
+    <div className="flex justify-between md:px-28">
+      <div className="rights">
+        <p className="text-stone-600">Copyright © fitlikevic watamu.</p>
+      </div>
+      <div className="back-top grid grid-cols-1 place-items-center">
+        <Link></Link>
+        <p className="text-stone-600">back to top</p>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

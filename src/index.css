@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Oswald", sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
