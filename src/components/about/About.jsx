@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import about_image from "../../assets/about-me.jpg";
+import about_image from "../../assets/about-me.JPG";
 // import mission_image from "../../assets/mission.png";
 // import objective_image from "../../assets/objective.png";
 // import vision_image from "../../assets/vision.png";

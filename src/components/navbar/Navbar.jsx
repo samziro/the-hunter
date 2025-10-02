@@ -88,7 +88,7 @@ const Navbar = () => {
 
       <div className="join-btn font-medium">
         <Link to="Contact" smooth={true} offset={-270} duration={500}>
-          <button className="hidden md:block mt-1 py-1 px-4 rounded-lg text-lightFontHeading bg-btnDarkTheme hover:bg-neutral-900">
+          <button className="hidden md:block mt-1 py-1 px-4 rounded-lg text-lightFontHeading bg-btnDarkTheme ">
             Contact Us
           </button>
         </Link>
