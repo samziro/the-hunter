@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`z-30 fixed w-full flex justify-between items-center px-4 md:px-20 py-2 transition-colors duration-300 ${
+      className={`z-30 fixed top-0 left-0 right-0 w-full flex justify-between items-center px-4 md:px-20 py-2 transition-colors duration-300 ${
         scrolled
           ? "bg-lightTheme text-lightFontHeading dark:bg-darkTheme dark:text-lightFontText shadow"
           : "bg-transparent text-lightFontText "
