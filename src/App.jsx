@@ -1,5 +1,5 @@
 import Footer from "./components/footer/Footer";
-// import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Classes from "./components/classes/Classes";
@@ -44,7 +44,7 @@ const App = () => {
     <div className="bg-white dark:bg-darkTheme ">
       {
         <motion.img
-          className="w-6 h-6 right-4 top-4 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
+          className="w-6 h-6 right-4 top-5 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
           src={theme === "dark" ? Sun : Moon}
           alt={theme === "dark" ? "light-theme" : "dark-theme"}
           onClick={changeTheme}
@@ -54,7 +54,7 @@ const App = () => {
         />
       }
 
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <Title Title1={"Transform Your Body,"} Title2={"Beyond standard"} subTitle={"TRAINER BIO"} />
       <About />
