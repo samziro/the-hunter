@@ -15,7 +15,7 @@ const Hero = () => {
         transition={{ delay: 1, duration: 2 }}
       >
         <h1 className="text-6xl text-center  md:text-8xl cursor-pointer text-lightFontText z-10 font-extrabold mb-4">
-          GET FIT. <br /> <span> <h1 className="text-darkFontHeading">BEYEOND STANDARD.</h1></span>
+          GET FIT. <br /> <span> <h1 className="text-darkFontHeading">BEYOND STANDARD.</h1></span>
         </h1 >
         
         <p className="leading-loose text-xl text-center text-lightFontText z-10 max-width:1/2">
