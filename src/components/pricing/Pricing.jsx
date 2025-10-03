@@ -1,86 +1,165 @@
-import "aos/dist/aos.css";
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 import Aos from "aos";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
-// eslint-disable-next-line react/prop-types
-const PricingCard = ({ title, sessions, oldPrice, newPrice, popular }) => {
- 
- useEffect(() => {
-   Aos.init({ duration: 500 });
- }, []);
+/* =========================
+   PricingCard
+   ========================= */
+const cardVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.36, ease: "easeOut" } },
+  hover: { scale: 1.03, transition: { duration: 0.18 } },
+};
+
+const PricingCard = ({ title, price, elements = [], buttonText, popular }) => {
   return (
-    <div
-      data-Aos="zoom-in-up"
-      className={`bg-slate-50 dark:bg-darkCardTheme Pricing m-4 md:m-0 rounded-lg hover:shadow-lg ${
-        popular ? " dark:border-2 dark:border-neutral-700" : ""
-      }`}
+    <motion.article
+      data-aos="zoom-in-up"
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true, amount: 0.2 }}
+      className={`h-full flex flex-col w-full  max-w-xl mx-auto md:mx-0 bg-slate-50 dark:bg-darkCardTheme rounded-lg overflow-hidden shadow-sm
+        ${popular ? "ring-2 ring-yellow-400 dark:ring-neutral-600" : ""}`}
+      role="region"
+      aria-labelledby={`pricing-${title}`}
     >
       {popular && (
-        <div className="text-center bg-lightFontText dark:bg-darkTheme font-bold text-darkFontHeading rounded-t-sm p-2 w-full">
+        <div className="bg-yellow-400 text-black font-semibold text-center py-1">
           Most Popular
         </div>
       )}
-      <div className="text-center p-4 leading-loose ">
-        <h2 className="text-xl font-semibold text-lightFontHeading dark:text-darkFontHeading">
+
+      <div className="p-6 h-full flex flex-col justify-between">
+        <p
+          id={`pricing-${title}`}
+          className="text-lg md:text-2xl font-semibold text-lightFontHeading dark:text-darkFontHeading"
+        >
           {title}
-        </h2>
-        <p className="text-lightFontHeading dark:text-darkFontText">
-          {sessions} sessions
         </p>
-        <p className="text-xl font-semibold line-through text-lightFontHeading dark:text-darkFontText">
-          {oldPrice}
+
+        <p className="mt-3 text-2xl md:text-3xl font-bold text-lightFontHeading dark:text-darkFontText">
+          {price}
         </p>
-        <p className="text-2xl font-bold text-lightFontHeading dark:text-darkFontHeading">
-          {newPrice}
-        </p>
-        <button className="py-0 px-4 mt-4 rounded-lg text-slate-100 bg-neutral-700 hover:bg-neutral-900">
-          Get Started
+
+        {elements && elements.length > 0 && (
+          <ul className="mt-4 text-left list-disc list-inside text-sm md:text-base text-lightFontHeading dark:text-darkFontText space-y-1">
+            {elements.map((el, idx) => (
+              <li key={idx}>{el}</li>
+            ))}
+          </ul>
+        )}
+
+        <button
+          type="button"
+          className="mt-6 inline-block px-6 py-2 rounded-lg bg-btnDarkTheme text-lightFontHeading font-bold hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnDarkTheme"
+        >
+          {buttonText}
         </button>
       </div>
-    </div>
+    </motion.article>
   );
 };
 
+PricingCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string,
+  elements: PropTypes.arrayOf(PropTypes.string),
+  buttonText: PropTypes.string,
+  popular: PropTypes.bool,
+};
+
+PricingCard.defaultProps = {
+  price: "Contact for price",
+  elements: [],
+  buttonText: "Choose Plan",
+  popular: false,
+};
+
+/* =========================
+   Pricing (parent)
+   - initializes AOS once
+   - sets up responsive grid
+   - uses framer motion container for stagger
+   ========================= */
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
 const Pricing = () => {
+  useEffect(() => {
+    // Initialize AOS once for this section (or move to App.jsx for app-wide)
+    Aos.init({ duration: 500, once: true });
+  }, []);
+
   const pricingOptions = [
     {
-      title: "MONTHLY MEMBERSHIP",
-      sessions: "12 sessions",
-      oldPrice: "$120.00",
-      newPrice: "$115.00",
+      title: "Single Session",
+      price: "2,500 KES",
+      elements: ["1 training session", "Personalized workout plan", "Expert guidance"],
+      buttonText: "Book Now",
       popular: false,
     },
     {
-      title: "Complete Edition",
-      sessions: "16 sessions",
-      oldPrice: "$160.00",
-      newPrice: "$145.00",
+      title: "6 Sessions",
+      price: "13,500 KES",
+      elements: ["6 training sessions", "Save 10%", "Email support"],
+      buttonText: "Book Now",
+      popular: false,
+    },
+    {
+      title: "10 Sessions",
+      price: "20,000 KES",
+      elements: ["10 training sessions", "Save 20%", "Priority email support"],
+      buttonText: "Get Started",
       popular: true,
     },
     {
-      title: "Premium",
-      sessions: "20 sessions",
-      oldPrice: "$200.00",
-      newPrice: "$175.00",
+      title: "16 Sessions",
+      price: "29,000 KES",
+      elements: ["16 training sessions", "Save 27%", "Monthly check-ins"],
+      buttonText: "Choose Plan",
+      popular: false,
+    },
+    {
+      title: "20 Sessions",
+      price: "35,000 KES",
+      elements: ["20 training sessions", "Save 30%", "Full transformation support"],
+      buttonText: "Maximize Results",
       popular: false,
     },
   ];
 
   return (
-    <div className="py-12 md:px-28 ">
-      <div className="  md:grid md:grid-cols-3 md:gap-8">
-        {pricingOptions.map((option, index) => (
+    <section className="py-12 px-4 md:px-12 lg:px-28">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-start"
+      >
+        {pricingOptions.map((opt, idx) => (
           <PricingCard
-            key={index}
-            title={option.title}
-            sessions={option.sessions}
-            oldPrice={option.oldPrice}
-            newPrice={option.newPrice}
-            popular={option.popular}
+            key={opt.title + idx}
+            title={opt.title}
+            price={opt.price}
+            elements={opt.elements}
+            buttonText={opt.buttonText}
+            popular={opt.popular}
           />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 

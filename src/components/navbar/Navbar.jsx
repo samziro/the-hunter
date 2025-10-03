@@ -11,7 +11,6 @@ import logo from "../../assets/logo.png";
 const navItems = [
   { to: "Hero", label: "Home", offset: 0 },
   { to: "About", label: "About Us", offset: -260 },
-  { to: "Services", label: "Services", offset: -110 },
   { to: "class", label: "Classes", offset: -260 },
   { to: "Pricing", label: "Pricing", offset: -480 },
 ];
@@ -33,7 +32,7 @@ const Navbar = () => {
     navItems.map(({ to, label, offset }, i) => (
       <motion.li
         key={to}
-        whileHover={{ scale: 1.05, color: "#4F46E5" }}
+        whileHover={{ scale: 1.05, cursor: "pointer" }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,8 +56,8 @@ const Navbar = () => {
     <motion.nav
       className={`z-30 fixed w-full flex justify-between items-center px-4 md:px-20 py-2 transition-colors duration-300 ${
         scrolled
-          ? "bg-lightTheme text-lightFontHeading dark:bg-darkTheme shadow"
-          : "bg-transparent text-lightFontText"
+          ? "bg-lightTheme text-lightFontHeading dark:bg-darkTheme dark:text-lightFontText shadow"
+          : "bg-transparent text-lightFontText "
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -76,11 +75,11 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex md:gap-8 font-medium">{renderNavItems()}</ul>
+      <ul className="hidden md:flex md:gap-8 font-bold">{renderNavItems()}</ul>
 
       {/* Mobile Menu Toggle */}
       <button
-        className="md:hidden block focus:outline-none z-40"
+        className="md:hidden block focus:outline-none z-40 bg-btnDarkTheme text-lightTheme p-2 rounded"
         onClick={toggleMenu}
         aria-label="Toggle navigation menu"
       >
@@ -91,7 +90,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute top-full left-0 w-full bg-white dark:bg-darkTheme shadow-md md:hidden"
+            className="absolute top-full left-0 w-full bg-white dark:bg-darkTheme text-lightFontHeading dark:text-darkFontHeading shadow-md md:hidden"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -99,10 +98,7 @@ const Navbar = () => {
           >
             <ul className="flex flex-col items-center gap-4 py-6 font-medium">
               {renderNavItems()}
-              <motion.li
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link to="Contact" smooth={true} offset={-270} duration={500}>
                   <button className="mt-2 py-2 px-6 rounded-lg text-white bg-btnDarkTheme shadow">
                     Contact Us
@@ -120,7 +116,7 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="py-2 px-6 rounded-lg text-lightFontHeading bg-btnDarkTheme font-medium shadow"
+            className="py-2 px-6 rounded-lg text-lightFontHeading bg-btnDarkTheme shadow font-bold"
           >
             Contact Us
           </motion.button>

@@ -21,7 +21,7 @@ const Newsletter = () => {
             required
             className=" my-4 p-2 bg-slate-50 rounded-lg focus:outline-none focus:shadow-lg "
           />
-          <button className="py-1 px-4 mt-1 rounded-lg text-slate-100 bg-lightFontText dark:bg-darkCardTheme hover:bg-neutral-900 ">
+          <button className="py-2 px-6 mt-1 rounded-lg dark:text-lightFontHeading  bg-btnDarkTheme hover:bg-opacity-90 font-bold">
             Subscribe
           </button>
         </div>

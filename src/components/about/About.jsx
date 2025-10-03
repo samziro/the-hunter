@@ -59,11 +59,11 @@ const About = () => {
          <p >
            My mission is to help you achieve your health, fitness, and lifestyle goals through:
 
-            <ul className="list-disc list-inside">
-              <li><b>Personalized training programs</b> tailored to your body type, goals, and preferences</li>
-              <li><b>Weight loss and fat-burning plans</b> for sustainable results</li>
-              <li><b>Muscle gain and strength-building programs</b> to enhance performance</li>
-              <li><b>Holistic wellness coaching</b> to improve energy, confidence, and overall health</li>
+            <ul className="list-mark grid grid-cols-1 gap-2 md:grid md:grid-cols-2 md:gap-6 my-4">
+              <li className="ring-1 ring-gold p-2 rounded shadow-glow"><b>Personalized training programs</b> tailored to your body type, goals, and preferences</li>
+              <li className="ring-1 ring-gold p-2 rounded shadow-glow"><b>Weight loss and fat-burning plans</b> for sustainable results</li>
+              <li className="ring-1 ring-gold p-2 rounded shadow-glow"><b>Muscle gain and strength-building programs</b> to enhance performance</li>
+              <li className="ring-1 ring-gold p-2 rounded shadow-glow"><b>Holistic wellness coaching</b> to improve energy, confidence, and overall health</li>
             </ul>
          </p>
           

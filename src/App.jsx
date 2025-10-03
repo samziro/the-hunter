@@ -13,6 +13,7 @@ import Sun from "./assets/sun_icon.png";
 import Moon from "./assets/moon_icon.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Email from "./components/email/Email";
 
 const App = () => {
 
@@ -40,10 +41,10 @@ const App = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-darkTheme">
+    <div className="bg-white dark:bg-darkTheme ">
       {
         <motion.img
-          className="w-6 h-6 right-4 top-4 z-50 fixed cursor-pointer mr-8"
+          className="w-6 h-6 right-4 top-4 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
           src={theme === "dark" ? Sun : Moon}
           alt={theme === "dark" ? "light-theme" : "dark-theme"}
           onClick={changeTheme}
@@ -63,6 +64,7 @@ const App = () => {
       <Classes setPlayState={setPlayState} />
       <Title Title1={"ULTIMATE TRANSFORMATION"} Title2={"PROGRAM"} subTitle={"PRICING"} />
       <Pricing />
+      <Email/>
       <Title Title1={"Proven"} Title2={"Transformations"} subTitle={"TESTIMONIALS"} />
       <Testimonials />
       <Title Title1={"Ready to"} Title2={"Transform Your Life?"} subTitle={"GET IN TOUCH"} />
