@@ -2,10 +2,8 @@ import { useState } from "react";
 import personal_training_image from "../../assets/personal trainer.png";
 import hiit_workout_image from "../../assets/hiit-work-out.png";
 import gym_workout_image from "../../assets/back.png";
-
 import hiit_work_out_video from "../../assets/hiit-work-out.webm";
 import personal_trainer_video from "../../assets/personal trainer.webm";
-
 import gym_work_out_video from "../../assets/gym.webm";
 import "aos/dist/aos.css";
 import { useEffect } from "react";

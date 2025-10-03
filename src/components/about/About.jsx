@@ -1,35 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import about_image from "../../assets/about.png";
-// import mission_image from "../../assets/mission.png";
-// import objective_image from "../../assets/objective.png";
-// import vision_image from "../../assets/vision.png";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
 
 const About = () => {
-  // const cardData = [
-  //   {
-  //     image: mission_image,
-  //     heading: "Our Mission",
-  //     description:
-  //       "To empower individuals to take charge of their health and well-being, provide accessible, effective, and enjoyable fitness solutions that promote a balanced and active lifestyle.",
-  //   },
-  //   {
-  //     image: objective_image,
-  //     heading: "Our Objective",
-  //     description:
-  //       "We offer comprehensive fitness programs, nutritional guidance, and provide fitness solutions that are accessible to people of all backgrounds, ages, and fitness levels, fostering an inclusive community that celebrates diversity.",
-  //   },
-  //   {
-  //     image: vision_image,
-  //     heading: "Our Vision",
-  //     description:
-  //       "Envisioning a world where every individual embraces a fit and healthy lifestyle, revolutionizing the way people approach fitness, fostering a global community that prioritizes well-being and self-improvement.",
-  //   },
-  // ];
-
+  
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
@@ -76,23 +53,7 @@ const About = () => {
         </div>
         
       </div>
-      {/* <div className="values mx-4 md:mx-0 grid grid-cols-1 gap-4 md:grid md:grid-cols-3 md:justify-items-center md:align-items-center md:gap-8 md:px-28">
-        {cardData.map((item) => (
-          <div
-            key={item.heading}
-            className="card shadow-lg rounded-lg p-1 bg-slate-50 dark:bg-darkCardTheme flex flex-col"
-            data-aos="slide-up"
-          >
-            <img className="rounded" src={item.image} alt={item.heading} />
-            <h1 className="font-semibold text-lg  text-lightFontHeading dark:text-darkFontHeading">
-              {item.heading}
-            </h1>
-            <p className="leading-loose text-lightFontText dark:text-darkFontText">
-              {item.description}
-            </p>
-          </div>
-        ))}
-      </div> */}
+      
     </>
   );
 };

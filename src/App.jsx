@@ -44,7 +44,7 @@ const App = () => {
     <div className="bg-white dark:bg-darkTheme ">
       {
         <motion.img
-          className="w-6 h-6 right-4 top-5 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
+          className="w-6 h-6 right-4 top-4 md:top-5 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
           src={theme === "dark" ? Sun : Moon}
           alt={theme === "dark" ? "light-theme" : "dark-theme"}
           onClick={changeTheme}
@@ -57,10 +57,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Title Title1={"Transform Your Body,"} Title2={"Beyond standard"} subTitle={"TRAINER BIO"} />
-      <About />
-      {/* <Title Title={"Our Services"} />
-      <Services /> */}
-       
+      <About /> 
       <Classes setPlayState={setPlayState} />
       <Title Title1={"ULTIMATE TRANSFORMATION"} Title2={"PROGRAM"} subTitle={"PRICING"} />
       <Pricing />
