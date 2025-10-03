@@ -47,7 +47,7 @@ const About = () => {
           className="about-text flex flex-col gap-4 leading-8 text-text-lightFontText   dark:text-darkFontText"
           data-aos="zoom-in-up"
         >
-          <h2 className="text-xl font-semibold mb-4  ">Welcome to FIT Hunter – Your Trusted Partner in Fitness and Wellness</h2>
+          <p className="text-4xl font-bold mb-4  ">Welcome to FIT Hunter – Your Trusted Partner in Fitness and Wellness</p>
           <>
             At FIT Hunter, we specialize in personal training, fitness coaching, and wellness 
           programs designed to help individuals achieve lasting results. 

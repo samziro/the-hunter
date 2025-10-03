@@ -79,11 +79,11 @@ const Navbar = () => {
 
       {/* Mobile Menu Toggle */}
       <button
-        className="md:hidden block focus:outline-none z-40 bg-btnDarkTheme text-lightTheme p-2 rounded"
+        className="md:hidden block focus:outline-none z-40 bg-btnDarkTheme text-lightTheme p-1"
         onClick={toggleMenu}
         aria-label="Toggle navigation menu"
       >
-        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2xl" />
+        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="xl" />
       </button>
 
       {/* Mobile Dropdown */}
