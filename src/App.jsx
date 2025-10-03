@@ -1,5 +1,5 @@
 import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
+// import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Classes from "./components/classes/Classes";
@@ -54,7 +54,7 @@ const App = () => {
         />
       }
 
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Title Title1={"Transform Your Body,"} Title2={"Beyond standard"} subTitle={"TRAINER BIO"} />
       <About />
