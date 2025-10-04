@@ -47,7 +47,7 @@ const App = () => {
       {
         <motion.div
           onClick={changeTheme}
-          className="fixed right-4 top-2 md:top-3.5 z-50 cursor-pointer bg-btnDarkTheme p-2 rounded-full flex items-center justify-center"
+          className="fixed right-12 md:right-4 top-3 md:top-3.5 z-50 cursor-pointer bg-btnDarkTheme/60 p-1 md:p-2 rounded-full flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 2 }}
