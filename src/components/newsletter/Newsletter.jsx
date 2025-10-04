@@ -14,14 +14,14 @@ const Newsletter = () => {
         <p className="text-center my-4 text-lightFontHeading dark:text-darkFontText">
           Join our program to get news and updates on thefithunter.
         </p>
-        <div className="grid grid-cols-1">
+        <div className="grid grid-cols-2 gap-4 justify-center items-center">
           <input
             type="text"
             placeholder="Enter your email ..."
             required
             className=" my-4 p-2 bg-slate-50 rounded-lg focus:outline-none focus:shadow-lg "
           />
-          <button className="py-2 px-6 mt-1 rounded-lg dark:text-lightFontHeading  bg-btnDarkTheme hover:bg-opacity-90 font-bold">
+          <button className="py-2 rounded-lg dark:text-lightFontHeading  bg-btnDarkTheme hover:bg-opacity-90 font-bold">
             Subscribe
           </button>
         </div>

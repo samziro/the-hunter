@@ -37,20 +37,14 @@ const About = () => {
            My mission is to help you achieve your health, fitness, and lifestyle goals through:
 
             <ul className="list-mark grid grid-cols-1 gap-2 md:grid md:grid-cols-2 md:gap-6 my-4">
-              <li className="ring-1 ring-gold p-2 rounded shadow-glow dark:bg-transparent bg-yellow-100"><b>Personalized training programs</b> tailored to your body type, goals, and preferences</li>
-              <li className="ring-1 ring-gold p-2 rounded shadow-glow dark:bg-transparent bg-yellow-100"><b>Weight loss and fat-burning plans</b> for sustainable results</li>
-              <li className="ring-1 ring-gold p-2 rounded shadow-glow dark:bg-transparent bg-yellow-100"><b>Muscle gain and strength-building programs</b> to enhance performance</li>
-              <li className="ring-1 ring-gold p-2 rounded shadow-glow dark:bg-transparent bg-yellow-100"><b>Holistic wellness coaching</b> to improve energy, confidence, and overall health</li>
+              <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Personalized training programs</b> tailored to your body type, goals, and preferences</li>
+              <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Weight loss and fat-burning plans</b> for sustainable results</li>
+              <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Muscle gain and strength-building programs</b> to enhance performance</li>
+              <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Holistic wellness coaching</b> to improve energy, confidence, and overall health</li>
             </ul>
          </p>
           
-          <p >
-            At FIT Hunter, fitness is not just a destination — it’s a journey of transformation. I combine expert guidance, empathetic coaching, and motivational support to ensure you stay consistent and empowered every step of the way.
-
-          Whether you want to lose weight, gain lean muscle, build strength, boost endurance, or improve overall wellness, I am here to guide you.
-          </p>
-
-        </div>
+          </div>
         
       </div>
       
@@ -59,3 +53,5 @@ const About = () => {
 };
 
 export default About;
+
+<div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><div class="w-8 h-8 flex items-center justify-center mb-2"><i class="ri-user-heart-line text-yellow-600 dark:text-yellow-400 text-xl"></i></div><h4 class="font-semibold text-gray-900 dark:text-white mb-2">Personalized Training</h4><p class="text-sm text-gray-700 dark:text-gray-300">Tailored programs for your body type and goals</p></div>

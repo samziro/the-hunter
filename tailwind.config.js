@@ -14,7 +14,7 @@ export default {
         btnDarkTheme: "rgb(238,189,43)", //
         darkCardTheme: "#282828",
         darkShadow: "rgb(238,189,43)",
-        box: "#f0dfacff]"
+        
       },
       boxShadow: theme => ({
         glow: `0 0 10px ${theme('colors.darkShadow')}`,

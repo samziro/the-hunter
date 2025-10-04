@@ -37,7 +37,7 @@ const PricingCard = ({ title, price, elements = [], buttonText, popular }) => {
       <div className="p-6 h-full flex flex-col justify-between">
         <p
           id={`pricing-${title}`}
-          className="text-lg md:text-2xl font-semibold text-lightFontHeading dark:text-darkFontHeading"
+          className="text-lg md:text-xl font-semibold text-lightFontHeading dark:text-darkFontHeading"
         >
           {title}
         </p>
@@ -49,11 +49,11 @@ const PricingCard = ({ title, price, elements = [], buttonText, popular }) => {
         {elements && elements.length > 0 && (
           <ul className="mt-4 text-left list-disc list-inside text-sm md:text-base text-lightFontHeading dark:text-darkFontText space-y-1">
             {elements.map((el, idx) => (
-              <li key={idx}>{el}</li>
+              <li key={idx}><i className="ri-check-line text-yellow-500 text-lg"></i> {el}</li>
             ))}
           </ul>
         )}
-
+        
         <button
           type="button"
           className="mt-6 inline-block px-6 py-2 rounded-lg bg-btnDarkTheme text-lightFontHeading font-bold hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnDarkTheme"

@@ -9,8 +9,8 @@ import Contact from "./components/contact/Contact";
 import Newsletter from "./components/newsletter/Newsletter";
 import Pricing from "./components/pricing/Pricing";
 import VideoPlayer from "./components/videoPlayer/VideoPlayer";
-import Sun from "./assets/sun_icon.png";
-import Moon from "./assets/moon_icon.png";
+// import Sun from "./assets/sun_icon.png";
+// import Moon from "./assets/moon_icon.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Email from "./components/email/Email";
@@ -45,7 +45,7 @@ const App = () => {
       {
         <motion.img
           className="w-6 h-6 right-4 top-4 md:top-5 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
-          src={theme === "dark" ? Sun : Moon}
+          src={theme === "dark" ? <i className="ri-moon-line text-lg"></i> : <i className="ri-sun-line text-lg"></i>}
           alt={theme === "dark" ? "light-theme" : "dark-theme"}
           onClick={changeTheme}
           initial={{ opacity: 0 }}

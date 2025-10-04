@@ -71,7 +71,7 @@ const Navbar = () => {
           smooth
           offset={-60}
           duration={500}
-          className="hidden md:inline-block px-6 py-2 font-bold cursor-pointer rounded-full border border-stone-400 hover:bg-btnDarkTheme hover:text-lightFontHeading transition"
+          className="hidden text-lightFontHeading dark:text-lightFontText md:inline-block px-6 py-2 font-bold cursor-pointer rounded-full  hover:bg-btnDarkTheme hover:text-lightFontHeading transition bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700"
         >
           Contact Us
         </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-16 left-4 right-4 bg-white shadow-lg rounded-lg px-6 py-5 z-40 text-center"
+            className="md:hidden absolute top-16 left-4 right-4 bg-yellow-50 dark:bg-yellow-900/20 shadow-lg rounded-lg px-6 py-5 z-40 text-center"
           >
             <ul className="space-y-5 text-stone-700 text-base">
               <NavItem to="hero" offset={0} duration={500} onClick={toggleMenu}>Home</NavItem>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 offset={-80}
                 duration={500}
                 onClick={toggleMenu}
-                className="inline-block px-4 py-2 border border-stone-400 rounded-full hover:bg-stone-700 hover:text-white transition"
+                className="inline-block px-4 py-2 border border-yellow-200 dark:border-yellow-700 rounded-full bg-yellow-50 dark:bg-yellow-900/20 transition"
               >
                 Contact Me
               </Link>
