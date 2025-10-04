@@ -5,15 +5,17 @@ import About from "./components/about/About";
 import Classes from "./components/classes/Classes";
 import Title from "./components/title/Title";
 import Testimonials from "./components/testimony/Testimonials";
-import Contact from "./components/contact/Contact";
+// import Contact from "./components/contact/Contact";
 import Newsletter from "./components/newsletter/Newsletter";
 import Pricing from "./components/pricing/Pricing";
 import VideoPlayer from "./components/videoPlayer/VideoPlayer";
 // import Sun from "./assets/sun_icon.png";
 // import Moon from "./assets/moon_icon.png";
+import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Email from "./components/email/Email";
+import Ready from "./components/Ready";
 
 const App = () => {
 
@@ -43,15 +45,16 @@ const App = () => {
   return (
     <div className="bg-white dark:bg-darkTheme ">
       {
-        <motion.img
-          className="w-6 h-6 right-4 top-4 md:top-5 z-50 fixed cursor-pointer mr-8 bg-btnDarkTheme -p-4 rounded-full"
-          src={theme === "dark" ? <i className="ri-moon-line text-lg"></i> : <i className="ri-sun-line text-lg"></i>}
-          alt={theme === "dark" ? "light-theme" : "dark-theme"}
+        <motion.div
           onClick={changeTheme}
+          className="fixed right-4 top-2 md:top-3.5 z-50 cursor-pointer bg-btnDarkTheme p-2 rounded-full flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 2 }}
-        />
+        >
+          {theme === "dark" ? <RiSunLine size={22} /> : <RiMoonClearLine size={22} />}
+        </motion.div>
+
       }
 
       <Navbar />
@@ -64,9 +67,10 @@ const App = () => {
       <Email/>
       <Title Title1={"Proven"} Title2={"Transformations"} subTitle={"TESTIMONIALS"} />
       <Testimonials />
-      <Title Title1={"Ready to"} Title2={"Transform Your Life?"} subTitle={"GET IN TOUCH"} />
-      <Contact />
-      <Title subTitle={"News letter"} />
+      <Ready />
+      {/* <Title Title1={"Ready to"} Title2={"Transform Your Life?"} subTitle={"GET IN TOUCH"} />
+      <Contact /> */}
+      
       <Newsletter />
       <Footer />
       <VideoPlayer playState={playState} setPlayState={setPlayState} />

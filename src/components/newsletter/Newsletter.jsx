@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Title from "../title/Title";
 import {
   faFacebook,
   faInstagram,
@@ -10,7 +11,8 @@ import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 const Newsletter = () => {
   return (
     <>
-      <div className="mx-4 md:px-28 md:1/2 md:grid md:grid-cols-1 md:place-items-center md:m-0">
+      <div className="py-4 md:px-28 md:1/2 md:grid md:grid-cols-1 md:place-items-center md:m-0 bg-slate-50 dark:bg-darkCardTheme">
+      <Title subTitle={"News letter"} />
         <p className="text-center my-4 text-lightFontHeading dark:text-darkFontText">
           Join our program to get news and updates on thefithunter.
         </p>
@@ -66,7 +68,7 @@ const Newsletter = () => {
           </a>
         </div>
       </div>
-      <hr className="my-2" />
+      
     </>
   );
 };

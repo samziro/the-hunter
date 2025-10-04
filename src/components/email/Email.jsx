@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png';
 
 const Email = () => {
     return (
-        <div className='email h-full mx-4 md:mx-0 bg-slate-50 dark:bg-darkCardTheme rounded-lg shadow-sm p-6 flex flex-col md:grid grid-cols-2 gap-4 md:gap-8 justify-center items-center ' >
+        <div className='email h-full bg-slate-50 dark:bg-darkCardTheme rounded shadow-sm p-6 flex flex-col md:grid grid-cols-2 gap-4 md:gap-8 justify-center items-center ' >
             <div className='flex justify-center items-center bg-contain bg-center bg-no-repeat' style={{ backgroundImage: `url(${logo})` }}>
                 <img src={email} alt="email support" />
             </div>

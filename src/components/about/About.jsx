@@ -18,7 +18,7 @@ const About = () => {
           src={about_image}
           alt="about-me-image"
           data-aos="zoom-in-up"
-          className="w-full md:w-3/4 rounded-md mx-auto"
+          className="w-full md:w-3/4 rounded-md mx-auto mt-4 md:mt-0"
         />
         <div
           className="about-text flex flex-col gap-4 leading-8 text-text-lightFontText   dark:text-darkFontText"
@@ -36,7 +36,7 @@ const About = () => {
          <p >
            My mission is to help you achieve your health, fitness, and lifestyle goals through:
 
-            <ul className="list-mark grid grid-cols-1 gap-2 md:grid md:grid-cols-2 md:gap-6 my-4">
+            <ul className="list-mark grid grid-cols-1 gap-4 md:grid md:grid-cols-2 md:gap-6 my-4">
               <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Personalized training programs</b> tailored to your body type, goals, and preferences</li>
               <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Weight loss and fat-burning plans</b> for sustainable results</li>
               <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Muscle gain and strength-building programs</b> to enhance performance</li>
@@ -54,4 +54,3 @@ const About = () => {
 
 export default About;
 
-<div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><div class="w-8 h-8 flex items-center justify-center mb-2"><i class="ri-user-heart-line text-yellow-600 dark:text-yellow-400 text-xl"></i></div><h4 class="font-semibold text-gray-900 dark:text-white mb-2">Personalized Training</h4><p class="text-sm text-gray-700 dark:text-gray-300">Tailored programs for your body type and goals</p></div>

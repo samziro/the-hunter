@@ -30,3 +30,4 @@ const VideoPlayer = ({ playState, setPlayState, videoSrc }) => {
 };
 
 export default VideoPlayer;
+
