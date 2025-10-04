@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <div className="py-4 mx-.5 flex justify-between text-lightFontHeading dark:text-darkFontText md:px-28 ">
+    <div className="py-4 mx-4 flex justify-between text-lightFontHeading dark:text-darkFontText md:px-28 ">
       <div className="rights">
         <p className="text-sm md:text-base ">&copy; {`${new Date().getFullYear()} ` }  Designed by <a className="font-bold" href="https://samuel-ziro.vercel.app">samtech</a></p>
       </div>

@@ -62,7 +62,7 @@ const Navbar = () => {
           <NavItem to="Hero" offset={0} duration={500}>Home</NavItem>
           <NavItem to="About" offset={-280} duration={500}>About</NavItem>
           <NavItem to="Class" offset={-280} duration={500}>Classes</NavItem>
-          <NavItem to="Pricing" offset={-480} duration={500}>Pricing</NavItem>
+          <NavItem to="Price" offset={-300} duration={500}>Pricing</NavItem>
         </ul>
 
         {/* Contact Button (Desktop) */}
@@ -96,7 +96,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden absolute top-16 left-4 right-4 bg-slate-50 dark:bg-darkCardTheme text-lightFontHeading dark:text-lightTheme shadow-lg rounded-lg px-6 py-5 z-40 w-full "
           >
-            <ul className="space-y-5 text-stone-700 text-base">
+            <ul className="space-y-5 text-lightFontHeading dark:text-darkFontText text-base">
         
               <NavItem className="hover:bg-darkFontText border " to="hero" offset={0} duration={500} onClick={toggleMenu}>Home</NavItem>
               <NavItem to="about" offset={-80} duration={500} onClick={toggleMenu}>About</NavItem>

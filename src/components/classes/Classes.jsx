@@ -51,7 +51,7 @@ const Classes = () => {
   return (
     <div>
       <Title Title1={"Choose Your"} Title2={"Transformation Path"} subTitle={"TRAINING PROGRAMS"}/>
-      <div className="class h-full mx-4 md:mx-0 grid grid-cols-1 gap-4 md:grid md:grid-cols-3 md:justify-items-center md:align-items-center md:gap-4 md:px-28 py-8 ">
+      <div className="Class h-full mx-4 md:mx-0 grid grid-cols-1 gap-4 md:grid md:grid-cols-3 md:justify-items-center md:align-items-center md:gap-4 md:px-28 py-8 ">
         {classData.map((item) => (
           <div
             key={item.heading}

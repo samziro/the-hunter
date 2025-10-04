@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
+import { RiCheckboxCircleFill } from "react-icons/ri";
 
 /* =========================
    PricingCard
@@ -47,9 +48,9 @@ const PricingCard = ({ title, price, elements = [], buttonText, popular }) => {
         </p>
 
         {elements && elements.length > 0 && (
-          <ul className="mt-4 text-left list-disc list-inside text-sm md:text-base text-lightFontHeading dark:text-darkFontText space-y-1">
+          <ul className="mt-4 text-left text-sm md:text-base text-lightFontHeading dark:text-darkFontText space-y-1">
             {elements.map((el, idx) => (
-              <li key={idx}><i className="ri-check-line text-yellow-500 text-lg"></i> {el}</li>
+              <li key={idx} className="flex gap-4"><RiCheckboxCircleFill className="text-btnDarkTheme mt-1 flex-shrink-0" size={20} /> {el}</li>
             ))}
           </ul>
         )}
@@ -140,7 +141,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-12 px-4 md:px-12 lg:px-28">
+    <section className="py-12 px-4 md:px-12 lg:px-28 Price">
       <motion.div
         variants={containerVariants}
         initial="hidden"

@@ -11,7 +11,7 @@ import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 const Newsletter = () => {
   return (
     <>
-      <div className="py-4 md:px-28 md:1/2 md:grid md:grid-cols-1 md:place-items-center md:m-0 bg-slate-50 dark:bg-darkCardTheme">
+      <div className="py-4 mx-4 md:px-28 md:1/2 md:grid md:grid-cols-1 md:place-items-center md:m-0 bg-slate-50 dark:bg-darkCardTheme">
       <Title subTitle={"News letter"} />
         <p className="text-center my-4 text-lightFontHeading dark:text-darkFontText">
           Join our program to get news and updates on thefithunter.
@@ -21,7 +21,7 @@ const Newsletter = () => {
             type="text"
             placeholder="Enter your email ..."
             required
-            className=" my-4 p-2 bg-slate-50 rounded-lg focus:outline-none focus:shadow-lg "
+            className=" my-4 p-2 bg-slate-50 rounded-lg shadow focus:outline-none focus:shadow-lg "
           />
           <button className="py-2 rounded-lg dark:text-lightFontHeading  bg-btnDarkTheme hover:bg-opacity-90 font-bold">
             Subscribe
