@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
-import { RiCheckboxCircleFill } from "react-icons/ri";
+import { RiCheckLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 /* =========================
    PricingCard
@@ -50,17 +51,20 @@ const PricingCard = ({ title, price, elements = [], buttonText, popular }) => {
         {elements && elements.length > 0 && (
           <ul className="mt-4 text-left text-sm md:text-base text-lightFontHeading dark:text-darkFontText space-y-1">
             {elements.map((el, idx) => (
-              <li key={idx} className="flex gap-4"><RiCheckboxCircleFill className="text-btnDarkTheme mt-1 flex-shrink-0" size={20} /> {el}</li>
+              <li key={idx} className="flex gap-4"><RiCheckLine className="text-btnDarkTheme mt-1 flex-shrink-0" size={20} /> {el}</li>
             ))}
           </ul>
         )}
         
-        <button
+        <Link to= "/Subscription">
+          <button
           type="button"
           className="mt-6 inline-block px-6 py-2 rounded-lg bg-btnDarkTheme text-lightFontHeading font-bold hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnDarkTheme"
         >
           {buttonText}
         </button>
+        </Link>
+        
       </div>
     </motion.article>
   );

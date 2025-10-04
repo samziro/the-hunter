@@ -4,6 +4,7 @@ import about_image from "../../assets/about.png";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import { Link } from "react-router-dom";
 
 const About = () => {
   
@@ -43,8 +44,15 @@ const About = () => {
               <li className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4"><b className="dark:text-lightFontText text-lightFontHeading">Holistic wellness coaching</b> to improve energy, confidence, and overall health</li>
             </ul>
          </p>
-          
+          <div className="grid grid-cols-1  z-10">
+                  <Link to="/Subscription" >
+                    <button className="py-4 px-8 rounded cursor-pointer text-2xl text-lightFontText bg-[#eebd2b] hover:bg-[#d8a800] font-extrabold ">
+                      LET'S GET STARTED
+                    </button>
+                  </Link>
+                </div>
           </div>
+          
         
       </div>
       

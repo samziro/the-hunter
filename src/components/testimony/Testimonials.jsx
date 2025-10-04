@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   const testimonialData = [
@@ -52,6 +53,15 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+       <div className="see-more grid grid-cols-1 justify-items-center align-items-center z-10">
+          <Link to="/Subscription">
+              <button className="mt-8 py-4 px-8 rounded cursor-pointer text-2xl text-lightFontText bg-btnDarkTheme font-extrabold ">
+                  JOIN NOW THE COMMUNITY
+              </button>
+          </Link>
+        </div>
+      
+              
     </>
   );
 };

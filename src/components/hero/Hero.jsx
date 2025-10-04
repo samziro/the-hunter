@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <h3 className="text-darkFontHeading z-10 text-center text-3xl font-bold my-2">TRUST THE PROCESS AND TRANSFORM YOUR LIFE.</h3>
         <div className="see-more grid grid-cols-1 justify-items-center align-items-center z-10">
-          <Link to="About" smooth={true} offset={-110} duration={500}>
+          <Link to="Price" smooth={true} offset={-100} duration={500}>
             <button className="mt-8 py-4 px-8 rounded cursor-pointer text-2xl text-lightFontText bg-[#eebd2b] hover:bg-[#d8a800] font-extrabold ">
               JOIN NOW
             </button>
