@@ -2,7 +2,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
-
 import { FaBarsStaggered } from "react-icons/fa6";
 import { RiCloseLargeFill } from "react-icons/ri";
 import "aos/dist/aos.css";
