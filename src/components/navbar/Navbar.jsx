@@ -94,10 +94,11 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-16 left-4 right-4 bg-yellow-50 dark:bg-yellow-900/20 shadow-lg rounded-lg px-6 py-5 z-40 text-center"
+            className="md:hidden absolute top-16 left-4 right-4 bg-slate-50 dark:bg-darkCardTheme text-lightFontHeading dark:text-lightTheme shadow-lg rounded-lg px-6 py-5 z-40 w-full "
           >
             <ul className="space-y-5 text-stone-700 text-base">
-              <NavItem to="hero" offset={0} duration={500} onClick={toggleMenu}>Home</NavItem>
+        
+              <NavItem className="hover:bg-darkFontText border " to="hero" offset={0} duration={500} onClick={toggleMenu}>Home</NavItem>
               <NavItem to="about" offset={-80} duration={500} onClick={toggleMenu}>About</NavItem>
               <NavItem to="services" offset={-60} duration={500} onClick={toggleMenu}>Classes</NavItem>
               <NavItem to="services" offset={-80} duration={500} onClick={toggleMenu}>Pricing</NavItem>

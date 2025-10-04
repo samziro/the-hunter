@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 const Hero = () => {
   return (
     <div
-      className="Hero bg-opacity-50 bg-cover bg-center bg-no-repeat h-screen flex place-content-center items-center "
+      className="Hero bg-opacity-50 bg-cover bg-center bg-no-repeat h-dvh flex place-content-center items-center "
       style={{ backgroundImage: `url(${heroImage})` }}
     >
       <div className="absolute inset-0 bg-black dark:opacity-[45%] "></div>
