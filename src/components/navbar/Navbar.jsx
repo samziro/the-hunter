@@ -47,7 +47,7 @@ const Navbar = () => {
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* Logo */}
+        {/*The Hnuter Logo */}
         <Link to="Hero" smooth offset={0} duration={500} className="cursor-pointer">
           <img
             className="w-20 md:w-24 cursor-pointer"
