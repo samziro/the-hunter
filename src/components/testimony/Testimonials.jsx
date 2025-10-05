@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 
 /**
  * Testimonials — semantic, accessible, AOS-friendly
@@ -105,7 +106,8 @@ const Testimonials = () => {
       </div>
 
       <div className="see-more mt-8 grid place-items-center">
-        <button
+        <Link to="Price">
+          <button
           type="button"
           onClick={handleJoinNow}
           className="py-4 px-8 rounded cursor-pointer text-2xl text-lightFontText bg-btnDarkTheme font-extrabold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnDarkTheme"
@@ -113,6 +115,7 @@ const Testimonials = () => {
         >
           JOIN THE COMMUNITY
         </button>
+        </Link>
       </div>
     </section>
   );

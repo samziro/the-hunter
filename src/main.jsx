@@ -10,8 +10,8 @@ const App = lazy(() => import("./App.jsx"));
 // Basic fallback (can be a spinner or skeleton loader)
 function LoadingFallback() {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center h-screen text-lg text-gray-700">
-      <p className="h-12 w-12 rounded-full animate-spin border-4  border-btnDarkTheme"></p>
+    <div className="flex flex-col gap-6 items-center justify-center h-screen text-lg text-gray-700">
+      <p className="h-24 w-24 rounded-full animate-spin border-t-4  border-btnDarkTheme"></p>
       <p>Loading please wait ...</p>
     </div>
   );
