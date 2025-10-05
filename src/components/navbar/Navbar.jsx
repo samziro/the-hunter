@@ -15,7 +15,7 @@ const NavItem = ({ to, offset, duration, children, onClick }) => (
     offset={offset}
     duration={duration}
     onClick={onClick}
-    className="cursor-pointer transition hover:font-bold"
+    className="cursor-pointer transition hover:font-bold block"
   >
     <li>{children}</li>
   </Link>
@@ -33,31 +33,30 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+  }, [isMenuOpen]);
+
   return (
     <header className="fixed top-0 w-full z-30 backdrop-blur bg-transparent shadow-sm">
       <motion.nav
-        className={` flex justify-between items-center px-4 md:px-20 py-2 transition-colors duration-300 ${
-        scrolled
-          ? "bg-lightTheme/50 text-lightFontHeading dark:bg-darkTheme/50 dark:text-lightFontText shadow"
-          : "bg-transparent text-lightFontText "
-      }`}
+        className={`flex justify-between items-center px-4 md:px-20 py-2 transition-colors duration-300 ${
+          scrolled
+            ? "bg-lightTheme/50 text-lightFontHeading dark:bg-darkTheme/50 dark:text-lightFontText shadow"
+            : "bg-transparent text-lightFontText"
+        }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ delay: 0.1, duration: 0.5, type: "spring", stiffness: 120 }}
-        role="navigation"
-        aria-label="Main navigation"
       >
-        {/*The Hnuter Logo */}
+        {/* Logo */}
         <Link to="Hero" smooth offset={0} duration={500} className="cursor-pointer">
-          <img
-            className="w-20 md:w-24 cursor-pointer"
-            src={logo}
-            alt="personal-trainer"
-          />
+          <img className="w-20 md:w-24" src={logo} alt="personal-trainer" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-10 items-center text-sm ">
+        <ul className="hidden md:flex gap-10 items-center text-sm">
           <NavItem to="Hero" offset={0} duration={500}>Home</NavItem>
           <NavItem to="About" offset={-280} duration={500}>About</NavItem>
           <NavItem to="Class" offset={-280} duration={500}>Classes</NavItem>
@@ -70,12 +69,12 @@ const Navbar = () => {
           smooth
           offset={-60}
           duration={500}
-          className="hidden text-lightFontHeading dark:text-lightFontText md:inline-block px-6 py-2 font-bold cursor-pointer rounded-full  hover:bg-btnDarkTheme hover:text-lightFontHeading transition bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700"
+          className="hidden text-lightFontHeading dark:text-lightFontText md:inline-block px-6 py-2 font-bold rounded-full cursor-pointer bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 hover:bg-btnDarkTheme transition"
         >
           Contact Us
         </Link>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu Toggle */}
         <button
           onClick={toggleMenu}
           className="md:hidden text-2xl"
@@ -93,23 +92,22 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-16 left-4 right-4 bg-slate-50 dark:bg-darkCardTheme text-lightFontHeading dark:text-lightTheme shadow-lg rounded-lg px-6 py-5 z-40 w-full "
+            className="md:hidden fixed top-16 left-4 right-4 bg-slate-50 dark:bg-darkCardTheme text-lightFontHeading dark:text-lightTheme shadow-lg rounded-lg px-6 py-5 z-40"
           >
-            <ul className="space-y-5 text-lightFontHeading dark:text-darkFontText text-base">
-        
-              <NavItem className="hover:bg-darkFontText border " to="hero" offset={0} duration={500} onClick={toggleMenu}>Home</NavItem>
-              <NavItem to="about" offset={-80} duration={500} onClick={toggleMenu}>About</NavItem>
-              <NavItem to="services" offset={-60} duration={500} onClick={toggleMenu}>Classes</NavItem>
-              <NavItem to="services" offset={-80} duration={500} onClick={toggleMenu}>Pricing</NavItem>
+            <ul className="space-y-5 text-base">
+              <NavItem to="Hero" offset={0} duration={500} onClick={toggleMenu}>Home</NavItem>
+              <NavItem to="About" offset={-280} duration={500} onClick={toggleMenu}>About</NavItem>
+              <NavItem to="Class" offset={-280} duration={500} onClick={toggleMenu}>Classes</NavItem>
+              <NavItem to="Price" offset={-300} duration={500} onClick={toggleMenu}>Pricing</NavItem>
               <Link
                 to="Contact"
                 smooth
                 offset={-80}
                 duration={500}
                 onClick={toggleMenu}
-                className="inline-block px-4 py-2 border border-yellow-200 dark:border-yellow-700 rounded-full bg-yellow-50 dark:bg-yellow-900/20 transition"
+                className="block text-center px-4 py-2 border border-yellow-200 dark:border-yellow-700 rounded-full bg-yellow-50 dark:bg-yellow-900/20 hover:bg-btnDarkTheme transition"
               >
-                Contact Me
+                Contact Us
               </Link>
             </ul>
           </motion.div>
@@ -117,7 +115,6 @@ const Navbar = () => {
       </AnimatePresence>
     </header>
   );
-
 };
 
 export default Navbar;

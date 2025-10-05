@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
 }
-h1, h2, h3, h4{
+h1, h2, h3{
     font-family: "Oswald", sans-serif;
 }
 @tailwind base;
