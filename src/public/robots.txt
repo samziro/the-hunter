@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://the-hunter-iron.vercel.app/sitemap.xml
+Host: https://the-hunter-iron.vercel.app

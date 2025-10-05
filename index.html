@@ -12,79 +12,114 @@
 
     <!-- Charset & Viewport -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <!-- Site Identity -->
+    <!-- Primary Meta -->
     <title>Fit Hunter | Personal Trainer & Fitness Coaching — Watamu, Kenya</title>
-    <meta name="application-name" content="Fit Hunter" />
-    <meta name="theme-color" content="#0f172a" />
-    <meta name="description" content="Fit Hunter (Iron World) — Personal training, tailored workout programs, defined abs program and online coaching in Watamu, Kenya. Packages from 2,500 KES." />
-    <meta name="keywords" content="personal trainer Watamu, fitness watamu, watamu fitness trainer, online coaching Kenya" />
+    <meta name="description" content="Fit Hunter — Personal training, tailored workout programs, defined abs program and online coaching in Watamu, Kenya. Packages from 2,500 KES." />
+    <meta name="keywords" content="personal trainer Watamu, fitness watamu, fitness trainer Kenya, personal training Watamu, online coaching Kenya" />
     <meta name="author" content="Fit Hunter" />
+    <meta name="theme-color" content="#0f172a" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://the-hunter-iron.vercel.app/" />
+
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Fit Hunter — Personal Trainer & Fitness Coaching in Watamu, Kenya" />
     <meta property="og:description" content="Personal training, tailored workout programs, and defined abs training in Watamu, Kenya. Packages start at 2,500 KES." />
-    <meta property="og:url" content="https://mike-seven.vercel.app/" />
+    <meta property="og:url" content="https://the-hunter-iron.vercel.app/" />
     <meta property="og:site_name" content="Fit Hunter (Iron World)" />
-    <meta property="og:image" content="https://mike-seven.vercel.app/images/pexels-andrea-piacquadio-3768916.jpg" />
+    <meta property="og:image" content="https://the-hunter-iron.vercel.app/images/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hunterkalama" />
     <meta name="twitter:title" content="Fit Hunter — Personal Trainer in Watamu, Kenya" />
     <meta name="twitter:description" content="Tailored training programs, abs program, and email support. Packages start at 2,500 KES." />
-    <meta name="twitter:image" content="https://mike-seven.vercel.app/images/pexels-andrea-piacquadio-3768916.jpg" />
+    <meta name="twitter:image" content="https://the-hunter-iron.vercel.app/images/logo.png" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://mike-seven.vercel.app/" />
-
-    <!-- Favicon -->
+    <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Fonts -->
+    <!-- Fonts: preload & preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Outfit used across the site -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Preloads -->
-    <link rel="preload" as="image" href="/images/pexels-andrea-piacquadio-3768916.jpg" />
+    <!-- Preload important LCP image (adjust path if your build places images elsewhere) -->
+    <link rel="preload" as="image" href="/images/logo.png" />
 
-    <!-- Structured Data -->
+    <!-- Web App manifest for PWA & metadata -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Structured Data: LocalBusiness + OfferCatalog + FAQ + VideoObject (placeholders) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "LocalBusiness",
-          "@id": "https://mike-seven.vercel.app/#business",
-          "name": "FIT Hunter (Iron World | Fithunter)",
-          "url": "https://mike-seven.vercel.app/",
-          "image": "https://mike-seven.vercel.app/images/pexels-andrea-piacquadio-3768916.jpg",
-          "description": "Personal training, tailored workout programs, defined abs program, and online coaching in Watamu, Kenya.",
+          "@id": "https://the-hunter-iron.vercel.app/#business",
+          "name": "Fit Hunter (Iron World)",
+          "alternateName": "The Fit Hunter",
+          "url": "https://the-hunter-iron.vercel.app/",
+          "logo": "https://the-hunter-iron.vercel.app/logo.png",
+          "image": "https://the-hunter-iron.vercel.app/images/logo.png",
+          "description": "Personal training, tailored workout programs, defined abs program, and online coaching in Watamu, Kenya. Packages start from 2,500 KES.",
           "email": "mailto:1thefithunter@gmail.com",
-          "telephone": "+254700000000",
-          "sameAs": [
-            "https://instagram.com/fit_hunter",
-            "https://facebook.com/fithunter"
-          ],
+          "telephone": "0748679264",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Watamu",
+            "addressRegion": "Kilifi",
             "addressCountry": "KE"
           },
-          "areaServed": "Watamu, Kenya",
-          "priceRange": "KES 2,500 - KES 35,000"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -3.356, 
+            "longitude": 40.031
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "06:00",
+              "closes": "20:00"
+            }
+          ],
+          "sameAs": [
+            "https://instagram.com/fit_hunter",
+            "https://facebook.com/fithunter",
+            
+          ],
+          "priceRange": "KES 2,500 - KES 35,000",
+          "areaServed": "Watamu, Kenya"
+        },
+        {
+          "@type": "OfferCatalog",
+          "@id": "https://the-hunter-iron.vercel.app/#offers",
+          "name": "Personal Training Packages",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Single Session" }, "priceCurrency": "KES", "price": "2500" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "6-Session Package" }, "priceCurrency": "KES", "price": "13500" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "10-Session Package" }, "priceCurrency": "KES", "price": "20000" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "20-Session Package" }, "priceCurrency": "KES", "price": "35000" }
+          ]
         }
       ]
     }
     </script>
 
-    <!-- FAQ Schema -->
+    <!-- FAQ schema (keeps your existing FAQ but optimized) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -95,13 +130,37 @@
           "name": "How much does a personal trainer cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prices start at 2,500 KES for a single session. Package options include 6 sessions for 13,500 KES, 10 sessions for 20,000 KES, and 20 sessions for 35,000 KES."
+            "text": "Single sessions start at 2,500 KES. Package options include 6 sessions for 13,500 KES, 10 sessions for 20,000 KES and 20 sessions for 35,000 KES."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer online coaching?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — both in-person training in Watamu and online coaching are available. Contact via email for details."
           }
         }
       ]
     }
     </script>
+
+    <!-- Optional VideoObject JSON-LD example (replace placeholders with real YouTube video info) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Fit Hunter — Transformation Sample",
+      "description": "Watch a client transformation and training session with Fit Hunter.",
+      "thumbnailUrl": "https://the-hunter-iron.vercel.app/images/logo.png",
+      "uploadDate": "2025-01-01T00:00:00+00:00",
+      "duration": "PT1M30S",
+      
+    }
+    </script>
+
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

@@ -1,0 +1,23 @@
+{
+  "name": "Fit Hunter",
+  "short_name": "FitHunter",
+  "description": "Personal training and fitness coaching in Watamu, Kenya — tailored programs and online coaching.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assest/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assest/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
