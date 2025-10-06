@@ -24,7 +24,7 @@ const Title = ({ Title1, Title2, subTitle }) => {
       )}
 
       
-      <h2 id={id} className="text-3xl md:text-6xl  leading-medium">
+      <h2 id={id} className="text-4xl md:text-6xl  leading-medium">
         <span className="block text-lightFontHeading dark:text-lightFontText"><h2>{Title1}</h2></span>
         {Title2 && (
           <span className="block text-darkFontHeading">
