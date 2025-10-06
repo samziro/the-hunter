@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 
 import personal_training_image from "../../assets/personal trainer.png";
 import hiit_workout_image from "../../assets/hiit-work-out.png";
+import online from "../../assets/online.jpg"
+import group from "../../assets/group.jpg"
 import gym_workout_image from "../../assets/back.png";
 import hiit_work_out_video from "../../assets/hiit-work-out.webm";
 import personal_trainer_video from "../../assets/personal trainer.webm";
@@ -50,7 +52,7 @@ const Classes = () => {
       keywords: "strength training, muscle building, gym workout plan",
     },
     {
-      image: gym_workout_image,
+      image: online,
       heading: "Online Coaching",
       description:
         "A comprehensive program designed to build muscle, enhance endurance, and improve performance.",
@@ -58,7 +60,7 @@ const Classes = () => {
       keywords: "strength training, muscle building, gym workout plan",
     },
     {
-      image: gym_workout_image,
+      image: group,
       heading: "Group Coaching",
       description:
         "A comprehensive program designed to build muscle, enhance endurance, and improve performance.",
