@@ -65,13 +65,13 @@ const Navbar = () => {
 
         {/* Contact Button (Desktop) */}
         <Link
-          to="Contact"
+          to="Price"
           smooth
           offset={-60}
           duration={500}
           className="hidden text-lightFontHeading dark:text-lightFontText md:inline-block px-6 py-2 font-bold rounded-full cursor-pointer bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 hover:bg-btnDarkTheme transition"
         >
-          Contact Us
+          Get Started
         </Link>
 
         {/* Mobile Menu Toggle */}
@@ -107,7 +107,7 @@ const Navbar = () => {
                 onClick={toggleMenu}
                 className="block text-center px-4 py-2 border border-yellow-200 dark:border-yellow-700 rounded-full bg-yellow-50 dark:bg-yellow-900/20 hover:bg-btnDarkTheme transition"
               >
-                Contact Us
+                Get Started
               </Link>
             </ul>
           </motion.div>

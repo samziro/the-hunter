@@ -12,6 +12,7 @@ import gym_workout_image from "../../assets/back.png";
 import hiit_work_out_video from "../../assets/hiit-work-out.webm";
 import personal_trainer_video from "../../assets/personal trainer.webm";
 import gym_work_out_video from "../../assets/gym.webm";
+import email from "../../assets/email.webp"
 import ConsultationModal from "../Modal";
 import VideoPlayer from "../videoPlayer/VideoPlayer";
 import Title from "../title/Title";
@@ -64,6 +65,14 @@ const Classes = () => {
       heading: "Group Coaching",
       description:
         "A comprehensive program designed to build muscle, enhance endurance, and improve performance.",
+      video: gym_work_out_video,
+      keywords: "strength training, muscle building, gym workout plan",
+    },
+    {
+      image: email,
+      heading: "Email Support",
+      description:
+        "Get continuous support and guidance throughout your journey.",
       video: gym_work_out_video,
       keywords: "strength training, muscle building, gym workout plan",
     },
