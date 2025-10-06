@@ -131,7 +131,7 @@ const App = () => {
         </Suspense>
 
         <Suspense fallback={<SectionFallback label="Loading pricing…" />}>
-          <Title Title1="ULTIMATE TRANSFORMATION" Title2="PROGRAM" subTitle="PRICING" />
+          <Title Title1="TRAINING TRANSFORMATION" Title2="PROGRAM" subTitle="PRICING" />
           <Pricing />
           <Email />
         </Suspense>

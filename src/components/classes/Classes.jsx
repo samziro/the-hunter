@@ -27,9 +27,9 @@ const Classes = () => {
   const classData = [
     {
       image: personal_training_image,
-      heading: "1-on-1 Personal Training",
+      heading: "Personal Training",
       description:
-        "Work directly with a certified coach on a personalized training plan designed for your unique goals — whether that's weight loss, muscle gain, strength, or total body transformation.",
+        "Work directly with a certified coach on a personalized training plan designed for your unique goals.",
       video: personal_trainer_video,
       keywords: "personal trainer, fitness coaching, body transformation",
     },
@@ -37,15 +37,31 @@ const Classes = () => {
       image: hiit_workout_image,
       heading: "Defined Abs Program",
       description:
-        "Shred stubborn belly fat and sculpt a stronger core with progressive HIIT-based ab workouts. This 8-week program evolves every session to maximize results and boost metabolism.",
+        "Shred stubborn belly fat and sculpt a stronger core with progressive HIIT-based ab workouts.",
       video: hiit_work_out_video,
       keywords: "HIIT workout, ab training, fat burning program",
     },
     {
       image: gym_workout_image,
-      heading: "Full-Body Strength & Conditioning",
+      heading: "Workout Programs",
       description:
-        "A comprehensive program designed to build muscle, enhance endurance, and improve performance. Choose from beginner foundations, mass-building, or advanced shred plans.",
+        "A comprehensive program designed to build muscle, enhance endurance, and improve performance.",
+      video: gym_work_out_video,
+      keywords: "strength training, muscle building, gym workout plan",
+    },
+    {
+      image: gym_workout_image,
+      heading: "Online Coaching",
+      description:
+        "A comprehensive program designed to build muscle, enhance endurance, and improve performance.",
+      video: gym_work_out_video,
+      keywords: "strength training, muscle building, gym workout plan",
+    },
+    {
+      image: gym_workout_image,
+      heading: "Group Coaching",
+      description:
+        "A comprehensive program designed to build muscle, enhance endurance, and improve performance.",
       video: gym_work_out_video,
       keywords: "strength training, muscle building, gym workout plan",
     },
@@ -69,7 +85,7 @@ const Classes = () => {
       />
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
+        className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -100,7 +116,7 @@ const Classes = () => {
                 className="mt-auto flex items-center justify-center gap-2 py-3 px-6 bg-btnDarkTheme text-white font-bold rounded hover:bg-[#d8a800] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-btnDarkTheme"
                 aria-label={`Watch preview video of ${item.heading}`}
               >
-                <p className="h-4 w-4 rounded-full bg-black/60 p-4 flex items-center justify-center"> ▶ </p> Watch Program Preview
+                 ▶ Watch Program Preview
               </button>
             </div>
           </article>
